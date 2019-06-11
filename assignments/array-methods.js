@@ -124,7 +124,7 @@ console.log(vipEmailList);
 
 
 // Problem 3
-//Which companies have the largest people
+//Which companies have the largest people :3
 
 largest = runners.filter(runner => {
     if(runner.shirt_size === "2XL" || runner.shirt_size === "3XL"){
@@ -138,3 +138,12 @@ biggestCompanies = largest.map(runner =>{
 
 console.log(largest);
 console.log(biggestCompanies);
+
+
+//average donation amount
+
+averageDonation = runners.reduce((total, runner) => {
+    return total += runner.donation;
+}, 0)/runners.length;
+
+console.log(averageDonation);
