@@ -121,6 +121,20 @@ vipEmailList = vipList.map((runner) => {
 
 console.log(vipList);
 console.log(vipEmailList);
-// Problem 3
 
-biggestCompanies = runners.map
+
+// Problem 3
+//Which companies have the largest people
+
+largest = runners.filter(runner => {
+    if(runner.shirt_size === "2XL" || runner.shirt_size === "3XL"){
+        return runner;
+    }
+})
+
+biggestCompanies = largest.map(runner =>{
+    return runner.company_name;
+})
+
+console.log(largest);
+console.log(biggestCompanies);

@@ -90,4 +90,17 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  
+sortedArr = array.sort(); //sort array in order
+for (let i=0; i<sortedArr.length; i++){ //loop through each element
+  if(sortedArr[i]=== sortedArr[i+1]){ //if index is the same as the next index 
+    sortedArr.splice(i, 1); //splice that index out 
+  }
 }
+return cb(sortedArr);
+}
+
+removeDuplicates(['a', 'a', 'b', 'c', 'd', 'b', 'c', 'd', 'd', 'd', 'f'], function(array){
+  console.log(array);
+}
+)
